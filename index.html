@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Button Generator</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+     <section class="modal modal-hidden">
+          <button class="modal-close teal bg-white">Close</button>
+          <h2 class="modal-heading">Copy the code below</h2>
+          <pre class="modal-content-html black bg-white" style="height: 40px;">
+          </pre>
+          <div class="modal-css">
+               <pre class="modal-content-css black bg-white">
+               </pre>
+               <button class="css-copy bg-teal white">Copy</button>
+          </div>
+     </section>
+
+
+
+     <form class="white">
+
+          <!-- Background Selector -->
+          <div class="settings">
+               <div>
+                    <label for="btn-bg" class="">Background</label>
+               </div>
+               <div class="two-inputs">
+                    <select name="btn_bg" id="btn-bg">
+                         <option id="custom-bg-color" value="none" selected disabled>-=Select Background=-</option>
+                         <option value="#0d6efd">Blue</option>
+                         <option value="#6610f2">Indigo</option>
+                         <option value="#6f42c1">Purple</option>
+                         <option value="#d63384">Pink</option>
+                         <option value="#dc3545">Red</option>
+                         <option value="#fd7e14">Orange</option>
+                         <option value="#ffc107">Yellow</option>
+                         <option value="#198754">Green</option>
+                         <option value="#0dcaf0">Cyan</option>
+                         <option value="#000000">Black</option>
+                         <option value="#FFFFFF" selected>White</option>
+                         <option value="" disabled>More to come</option>
+                    </select>
+                    <input id="bg-picker" type="color" class="color-picker" value="#FFFFFF">
+               </div>
+          </div>
+
+          <!-- Text Color Selector -->
+          <div class="settings">
+               <div>
+                    <label for="btn-txt" class="">Text Color</label>
+               </div>
+               <div class="two-inputs">
+                    <select name="btn_txt" id="btn-txt" style="width: calc(100% - 60px);">
+                         <option id="custom-text-color" value="none" selected disabled>-=Select Text Color=-</option>
+                         <option value="#0d6efd">Blue</option>
+                         <option value="#6610f2">Indigo</option>
+                         <option value="#6f42c1">Purple</option>
+                         <option value="#d63384">Pink</option>
+                         <option value="#dc3545">Red</option>
+                         <option value="#fd7e14">Orange</option>
+                         <option value="#ffc107">Yellow</option>
+                         <option value="#198754">Green</option>
+                         <option value="#0dcaf0">Cyan</option>
+                         <option value="#000000" selected>Black</option>
+                         <option value="#FFFFFF">White</option>
+                         <option value="" disabled>More to come</option>
+                    </select>
+                    <input id="font-color-picker" type="color" class="color-picker" value="#000000">
+               </div>
+          </div>
+
+          <!-- Shape Selector -->
+          <div class="settings btn-shape">
+               <div>
+                    <label for="btn-shape" class="">Shape</label>
+               </div>
+               <div>
+                    <select name="btn_shape" id="btn-shape">
+                         <!-- <option value="" selected disabled>-=Select Shape=-</option> -->
+                         <option value="0px" selected>None</option>
+                         <option value="10px">Rounded Corners</option>
+                         <option value="200px">Pill</option>
+                         <option value="50%">Circular</option>
+                         <option value="" disabled>More to come</option>
+                    </select>
+               </div>
+          </div>
+
+          <!-- Hover Animation Selector -->
+          <div class="settings">
+               <div>
+                    <label for="btn-hover" class="">Hover Animation</label>
+               </div>
+               <div>
+                    <select name="btn_hover" id="btn-hover">
+                         <option value="hover-none" selected>None</option>
+                         <option value="hover-scale-up">Scale Up</option>
+                         <option value="hover-scale-down">Scale Down</option>
+                         <option value="hover-expand">Expand</option>
+                         <option value="hover-shrink">Shrink</option>
+                         <option value="hover-fade-out">Fade Out</option>
+                         <option value="hover-fade-in">Fade In</option>
+                         <option value="hover-rainbow">Rainbow</option>
+                         <option value="hover-border-light-up">Border Light Up</option>
+                         <option value="hover-empty">Empty</option>
+                         <option value="hover-raise">Raise</option>
+                         <option value="hover-pulse">Pulse</option>
+                         <!-- <option value="hover-neon">Neon</option> -->
+                         <option value="hover-stretchable">Stretchable</option>
+                         <option disabled>More to come</option>
+                    </select>
+               </div>
+          </div>
+
+          <!-- Padding Adjuster -->
+          <div class="settings">
+               <div>
+                    <label for="padding-adjuster" class="">Padding Block</label>
+                    <input class="slider" type="range" name="" id="padding-block-adjuster" min="0" max="1" step="0.05"
+                         value="1" style="background-color: black;">
+                    <span id="padding-block-slider-value" class="slider-value">1</span>
+               </div>
+               <div>
+                    <label for="padding-adjuster" class="">Padding Inline</label>
+                    <input class="slider" type="range" name="" id="padding-inline-adjuster" min="0" max="2" step=0.05
+                         value="2">
+                    <span id="padding-inline-slider-value" class="slider-value">2</span>
+               </div>
+          </div>
+
+          <!-- Font Size Adjuster -->
+          <div class="settings">
+               <div>
+                    <label for="btn-font" class="">Font Size</label>
+               </div>
+               <div>
+                    <input class="slider" type="range" name="" id="font-size-adjuster" min="10" max="100" step=1
+                         value="50">
+                    <span id="font-size-slider-value" class="slider-value">50</span>
+               </div>
+          </div>
+
+          <!-- Text Input -->
+          <div class="settings">
+               <div>
+                    <label for="btn-inner-text" class="">Button Text</label>
+               </div>
+               <div>
+                    <input class="black" type="text" name="" id="placeholder-text" value="" placeholder="Generate Code"
+                         maxlength="30">
+               </div>
+          </div>
+
+          <!-- Border Radius -->
+          <div class="settings border-radius">
+               <div>
+                    <label id="" for="btn-border-radius" class="">Border Radius</label>
+               </div>
+               <div>
+                    <input class="slider" type="range" name="" id="border-radius-adjuster" min="0" max="2" step=0.1
+                         value="0">
+                    <span id="border-radius-slider-value" class="slider-value">0</span>
+               </div>
+          </div>
+
+     </form>
+
+     <div class="btn-section">
+          <button id="btn" class="bcg-button">Generate Code</button>
+     </div>
+
+     <div class="info-text bg-black white">
+          <p class="bg-black">Press <kbd class="red">"Enter"</kbd> to generate CSS. Press <kbd class="red">"Ctrl +
+                    Space"</kbd> to generate a random button. Press <kbd class="red">"Ctrl + R"</kbd> to reset the
+               styles.<br> Made by <kbd class="red">
+                    <a href="https://github.com/mohammmmmmmmmmed" style="color: red; font-size: larger; text-decoration: none; font-weight: 800;">Mohammed Sahal.</a></kbd></p>
+     </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="index.js"></script>
+</body>
+
+</html>
